@@ -74,7 +74,7 @@ public class Menu1 extends JFrame {
 		JButton btnNewButton = new JButton("2.Modify list of Employee");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Menu2 window2 = new Menu2();
+				Menu22 window2 = new Menu22();
 				window2.setVisible(true);
 			}
 		});
