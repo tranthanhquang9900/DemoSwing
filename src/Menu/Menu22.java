@@ -1,3 +1,4 @@
+package Menu;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -52,13 +53,6 @@ public class Menu22 extends JFrame {
 		panel.setLayout(null);
 		
 		JButton btnAddNewEmployee = new JButton("1.Add new Employee");
-		btnAddNewEmployee.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Menu1 menu1 = new Menu1();
-				menu1.setVisible(true);
-				dispose();
-			}
-		});
 		btnAddNewEmployee.setBounds(2, 0, 146, 64);
 		btnAddNewEmployee.setHorizontalAlignment(SwingConstants.LEFT);
 		panel.add(btnAddNewEmployee);
@@ -73,13 +67,6 @@ public class Menu22 extends JFrame {
 		panel.add(btnNewButton);
 		
 		JButton btnupdateBasicSalary = new JButton("3.Update basic salary");
-		btnupdateBasicSalary.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Menu3 menu3 = new Menu3();
-				menu3.setVisible(true);
-				dispose();
-			}
-		});
 		btnupdateBasicSalary.setBounds(1, 155, 144, 63);
 		panel.add(btnupdateBasicSalary);
 		

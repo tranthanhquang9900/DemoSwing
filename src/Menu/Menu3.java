@@ -1,23 +1,23 @@
+package Menu;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JScrollBar;
-import javax.swing.JComboBox;
-import javax.swing.JTextArea;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import javax.swing.JList;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.JButton;
 
-public class Menu22 extends JFrame {
+public class Menu3 extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
+	private JButton btnNewButton;
+	private JButton btnNewButton_1;
 
 	/**
 	 * Launch the application.
@@ -26,7 +26,7 @@ public class Menu22 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Menu22 frame = new Menu22();
+					Menu3 frame = new Menu3();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,16 +38,16 @@ public class Menu22 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Menu22() {
+	public Menu3() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 469, 335);
+		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(5, 5, 153, 291);
+		panel.setBounds(0, 0, 156, 261);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -59,68 +59,52 @@ public class Menu22 extends JFrame {
 				dispose();
 			}
 		});
-		btnAddNewEmployee.setBounds(2, 0, 146, 64);
+		btnAddNewEmployee.setBounds(2, 0, 153, 64);
 		btnAddNewEmployee.setHorizontalAlignment(SwingConstants.LEFT);
 		panel.add(btnAddNewEmployee);
 		
 		JButton btnNewButton = new JButton("2.Modify list of Employee");
-		btnNewButton.setBounds(1, 76, 145, 64);
+		btnNewButton.setBounds(2, 66, 153, 64);
 		btnNewButton.setHorizontalAlignment(SwingConstants.LEFT);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Menu2 menu2 = new Menu2();
+				menu2.setVisible(true);
+				dispose();
 			}
 		});
 		panel.add(btnNewButton);
 		
 		JButton btnupdateBasicSalary = new JButton("3.Update basic salary");
-		btnupdateBasicSalary.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Menu3 menu3 = new Menu3();
-				menu3.setVisible(true);
-				dispose();
-			}
-		});
-		btnupdateBasicSalary.setBounds(1, 155, 144, 63);
+		btnupdateBasicSalary.setBounds(2, 132, 153, 63);
 		panel.add(btnupdateBasicSalary);
 		
 		JButton btnExit = new JButton("Exit");
-		btnExit.setBounds(2, 227, 143, 64);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
 			}
 		});
+		btnExit.setBounds(2, 197, 153, 64);
 		panel.add(btnExit);
 		
-		JPanel panel_1_2 = new JPanel();
-		panel_1_2.setBounds(158, 5, 301, 291);
-		contentPane.add(panel_1_2);
-		panel_1_2.setLayout(null);
+		JLabel lblNewLabel = new JLabel("Current Basic Salary :");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(168, 52, 129, 39);
+		contentPane.add(lblNewLabel);
 		
-		JPanel panel_2 = new JPanel();
-		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_2.setBounds(0, 0, 297, 195);
-		panel_1_2.add(panel_2);
-		panel_2.setLayout(null);
+		textField = new JTextField();
+		textField.setBounds(295, 61, 129, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
 		
-		JScrollBar scrollBar = new JScrollBar();
-		scrollBar.setBounds(280, 0, 17, 195);
-		panel_2.add(scrollBar);
+		btnNewButton = new JButton("Edit");
+		btnNewButton.setBounds(208, 114, 89, 23);
+		contentPane.add(btnNewButton);
 		
-		JPanel panel_4 = new JPanel();
-		panel_4.setBounds(0, 195, 297, 96);
-		panel_1_2.add(panel_4);
-		panel_4.setLayout(null);
-		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(0, 15, 134, 29);
-		panel_4.add(comboBox);
-		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(167, 15, 120, 29);
-		panel_4.add(textArea);
-		
-		JButton btnSearch = new JButton("Search");
-		btnSearch.setBounds(177, 62, 89, 23);
-		panel_4.add(btnSearch);
+		btnNewButton_1 = new JButton("Apply");
+		btnNewButton_1.setBounds(320, 114, 89, 23);
+		contentPane.add(btnNewButton_1);
 	}
+
 }

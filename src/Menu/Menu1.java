@@ -1,11 +1,10 @@
+package Menu;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-
 import javax.swing.JTable;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
@@ -62,7 +61,13 @@ public class Menu1 extends JFrame {
 		panel.setLayout(null);
 		
 		JButton btnAddNewEmployee = new JButton("1.Add new Employee");
-		
+		btnAddNewEmployee.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Menu1 window = new Menu1();
+				window.setVisible(true);
+				
+			}
+		});
 		btnAddNewEmployee.setBounds(2, 0, 160, 64);
 		btnAddNewEmployee.setHorizontalAlignment(SwingConstants.LEFT);
 		panel.add(btnAddNewEmployee);
@@ -70,9 +75,8 @@ public class Menu1 extends JFrame {
 		JButton btnNewButton = new JButton("2.Modify list of Employee");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Menu22 menu2 = new Menu22();
-				menu2.setVisible(true);
-				dispose();
+				Menu22 window2 = new Menu22();
+				window2.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(1, 71, 160, 64);
@@ -84,7 +88,6 @@ public class Menu1 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Menu3 window3 = new Menu3();
 				window3.setVisible(true);
-				dispose();
 			}
 		});
 		btnupdateBasicSalary.setBounds(1, 145, 160, 63);
@@ -93,7 +96,6 @@ public class Menu1 extends JFrame {
 		JButton btnExit = new JButton("Exit");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
 			}
 		});
 		btnExit.setBounds(1, 218, 160, 64);
